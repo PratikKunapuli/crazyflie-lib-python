@@ -87,8 +87,8 @@ class Commander():
         if thrust > 0xFFFF or thrust < 0:
             raise ValueError('Thrust must be between 0 and 0xFFFF')
 
-        if self._x_mode:
-            roll, pitch = 0.707 * (roll - pitch), 0.707 * (roll + pitch)
+        # if self._x_mode:
+        #     roll, pitch = 0.707 * (roll - pitch), 0.707 * (roll + pitch)
 
         pk = CRTPPacket()
         pk.port = CRTPPort.COMMANDER
